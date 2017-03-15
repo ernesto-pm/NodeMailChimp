@@ -13,6 +13,7 @@ const apiKey        = process.env.APIKEY;
 app.get('/hook',function(req,res){
     console.log('req',req);
     console.log('res',res);
+    res.send('hi!');
 });
 
 app.use(bodyParser.json());
