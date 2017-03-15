@@ -48,6 +48,7 @@ webhook.on('error', function (error) {
 });
 
 webhook.on('subscribe', function (data, meta) {
+    console.log("saving user");
     let nuevoUsuario = new Usuario(data.id,data.email,data.merges.FNAME,data.merges.LNAME);
     jsonfile.writeFile('./data/lista.json',lista, {spaces:2}, function (err) {
         if(err) console.log(err);
