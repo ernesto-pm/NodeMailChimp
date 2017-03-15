@@ -30,16 +30,8 @@ let lista = new Lista();
         lista.aniadirUsuarioAzul(listaSerializada.usuariosAzules[i]);
     }
 })();
-
 // Termina obtener lista
 
-//let usuario1 = new Usuario('ernestopm20@gmail.com','Ernesto','Azul');
-//let usuario2 = new Usuario('ernestopm20@gmail.com','Ernesto','Rojo');
-//lista.aniadirUsuarioRojo(usuario1);
-//lista.aniadirUsuarioAzul(usuario2);
-/*
-
-*/
 
 const webhook = new MailchimpWebhook({port:port});
 
