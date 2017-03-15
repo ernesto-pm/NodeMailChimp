@@ -18,21 +18,12 @@ webhook.on('error', function (error) {
 });
 
 webhook.on('subscribe', function (data, meta) {
+    console.log(data);
     console.log(data.email+' subscribed to your newsletter!'); // Do something with your data!
 });
 
 webhook.on('unsubscribe', function (data, meta) {
+    console.log(data);
     console.log(data.email+' unsubscribed from your newsletter!'); // Do something with your data!
 });
 
-app.use(bodyParser.json());
-app.get('/hook',function(req,res){
-    console.log('req',req.body);
-    res.send('hi!');
-});
-
-/*
-app.listen(port,function callback(){
-   console.log("Aplicacion corriendo en puerto: "+port);
-});
-    */
