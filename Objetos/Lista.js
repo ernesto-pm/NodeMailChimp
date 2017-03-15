@@ -11,7 +11,9 @@ Lista.prototype = {
         }
     },
     aniadirUsuarioAzul : function(usuario){
-        this.usuariosAzules.push(usuario);
+        if(this.usuariosAzules.indexOf(usuario.id) == -1){
+            this.usuariosAzules.push(usuario);
+        }
     }
 };
 
