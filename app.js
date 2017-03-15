@@ -10,13 +10,14 @@ const port          = process.env.PORT || 9090;
 const apiKey        = process.env.APIKEY;
 // Termina configuracion de variables del entorno
 
+
+app.use(bodyParser.json());
 app.get('/hook',function(req,res){
     console.log('req',req);
     console.log('res',res);
     res.send('hi!');
 });
 
-app.use(bodyParser.json());
-app.listen(function callback(){
+app.listen(port,function callback(){
    console.log("Aplicacion corriendo en puerto: "+port);
 });
